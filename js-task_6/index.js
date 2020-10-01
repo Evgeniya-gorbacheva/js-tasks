@@ -87,8 +87,9 @@ console.log(str_7.match(/ab+a/g));
 let phoneNumber = '+37529 2720379'
 
 function check(phone) {
-    Reg = /\+?([1-9]{1}[0-9]{2}) ?-?([1-9]{2}) ?-?([1-9][0-9 -]{6,9})/g;
-
+  //  Reg = /\+?([1-9]{1}[0-9]{2}) ?-?([1-9]{2}) ?-?([1-9][0-9 -]{6,9})$/g;
+  Reg = /\+?(375) ?-?([1-9]{2}) ?-?([1-9][0-9 -]{6,9})$/g;
+  
     if (Reg.test(phone)) {
         return true
     } else {
@@ -122,3 +123,14 @@ function check(email) {
     }
 }
 console.log(check(email));
+
+
+
+
+const т = [1, 1, 1,  3, 7, 8]
+
+
+
+console.log(
+    т.reduce((acc, item) => acc.includes(item) ? (acc) : [...acc, item], [])
+)
